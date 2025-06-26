@@ -1,0 +1,202 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #dad5c1;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+.gameContainer {
+    width: 100vw;
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 0;
+}
+.gameHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    background-color: #9b9375;
+    padding: 0 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#gameTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: default;
+}
+
+.gameMenu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+h1 {
+    font-size: 1.8em;
+    color: #111;
+}
+h2 {
+    font-size: 1em;
+    color: #333;
+    cursor: pointer;
+    user-select: none;
+}
+h2:hover {
+    color: #000;
+}
+
+.clickArea {
+    width: 28vw;
+    min-width: 250px;
+    max-width: 350px;
+    height: 100%;
+    background-color: #6e6850;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.clickButton {
+    padding: 30px 40px;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #494432;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 20px;
+    transition: box-shadow 0.1s, transform 0.1s;
+    user-select: none;
+}
+
+.clickButton:active {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#clickCount {
+    font-size: 1.2em;
+    color: #fff;
+    background: rgba(0,0,0,0.1);
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    user-select: none;
+    max-width: 90%;
+}
+
+.upgradesWindow {
+    flex: 1 1 0;
+    max-width: 700px;
+    min-width: 200px;
+    height: 100%;
+    min-height: 40vh;
+    background-color: #b8ab77;
+    padding: 30px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    overflow-y: auto;
+    scrollbar-color: #6e6850 #dad5c100;
+    scrollbar-width: thin;
+}
+
+.upgradeItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    padding: 15px;
+    background-color: #9b9375;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    gap: 20px;
+    border: 2px solid #6e6850;
+}
+
+.upgradeItem span {
+    font-size: 1.2em;
+    color: #111;
+}
+
+.upgradeButton {
+    font-family: 'Press Start 2P', cursive;
+    padding: 10px 18px;
+    font-size: 0.8em;
+    background-color: #cfcbbe;
+    border: none;
+    cursor: pointer;
+    color: #000000;
+    border-radius: 5px;
+    transition: background 0.1s, color 0.1s, box-shadow 0.1s;
+    user-select: none;
+}
+
+.upgradeButton:hover {
+    background-color: #e0e0e0;
+    color: #111;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+}
+
+.upgradeButton:active {
+    transform: scale(1.03);
+}
+
+.upgradeDesc {
+    font-size: 0.8em;
+    color: #333;
+    margin-top: 2px;
+}
+
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+#clickCount.pop {
+    animation: pop 0.2s ease;
+}
+
+@media (max-width: 900px) {
+    .gameContainer {
+        flex-direction: column;
+        height: auto;
+    }
+    .clickArea, .upgradesWindow {
+        width: 100vw;
+        min-width: unset;
+        max-width: unset;
+        height: auto;
+    }
+    .upgradesWindow {
+        max-width: 700px;
+        width: 90%;
+    }
+}

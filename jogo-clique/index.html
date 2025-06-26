@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="gameHeader">
+        <div id="gameTitle">
+            <h1>Click!</h1>
+        </div>
+        <div class="gameMenu">
+            <h2>Pausar</h2>
+            <h2>Opções</h2>
+            <h2>Sair</h2>
+        </div>
+    </header>
+    <div class="gameContainer">
+        <div class="clickArea">
+            <button class="clickButton">Click!</button>
+            <div id="clickCount">0</div>
+        </div>
+        <div class="upgradesWindow">
+            <h2>Upgrades</h2>
+            <div class="upgradeItem" id="upgrade1">
+                <span>Valor dos Clicks!</span>
+                <span id="upgrade1Cost"></span>
+                <button class="upgradeButton" id="buyUpgrade1">Comprar</button>
+                <div class="upgradeDesc">
+                    +1 ao valor de cada clique. <br>
+                    <strong>Valor atual:</strong> <span id="upgrade1Value"></span>
+                </div>
+            </div>
+            <div class="upgradeItem" id="upgrade2">
+                <span>Clicks por segundo</span>
+                <span id="upgrade2Cost"></span>
+                <button class="upgradeButton" id="buyUpgrade2">Comprar</button>
+                <div class="upgradeDesc">
+                    +1 clique automático por segundo. <br>
+                    <strong>Valor atual:</strong> <span id="upgrade2Value"></span>
+                </div>
+            </div>
+            <div class="upgradeItem" id="upgrade3">
+                <span>Click Crítico</span>
+                <span id="upgrade3Cost"></span>
+                <button class="upgradeButton" id="buyUpgrade3">Comprar</button>
+                <div class="upgradeDesc">
+                    +5% de chance de clique crítico (x2). <br>
+                    <strong>Valor atual:</strong> <span id="upgrade3Value"></span>
+                </div>
+            </div>
+            <div class="upgradeItem" id="upgrade4">
+                <span>Multiplicador Global</span>
+                <span id="upgrade4Cost"></span>
+                <button class="upgradeButton" id="buyUpgrade4">Comprar</button>
+                <div class="upgradeDesc">
+                    +10% em todos os ganhos. <br>
+                    <strong>Valor atual:</strong> <span id="upgrade4Value"></span>
+                </div>
+            </div>
+            <div class="upgradeItem" id="upgrade5">
+                <span>Chance de Duplicar Auto</span>
+                <span id="upgrade5Cost"></span>
+                <button class="upgradeButton" id="buyUpgrade5">Comprar</button>
+                <div class="upgradeDesc">
+                    +5% de chance dos clicks automáticos dobrarem. <br>
+                    <strong>Valor atual:</strong> <span id="upgrade5Value"></span>
+                </div>
+            </div>
+            <div class="upgradeItem" id="upgrade6">
+                <span>Redução de Custo</span>
+                <span id="upgrade6Cost"></span>
+                <button class="upgradeButton" id="buyUpgrade6">Comprar</button>
+                <div class="upgradeDesc">
+                    -2% no custo de todos os upgrades. <br>
+                    <strong>Valor atual:</strong> <span id="upgrade6Value"></span>
+                </div>
+            </div>
+            <div class="upgradeItem" id="upgrade7">
+                <span>Click Automático Crítico</span>
+                <span id="upgrade7Cost"></span>
+                <button class="upgradeButton" id="buyUpgrade7">Comprar</button>
+                <div class="upgradeDesc">
+                    +2% de chance de auto-click ser crítico. <br>
+                    <strong>Valor atual:</strong> <span id="upgrade7Value"></span>
+                </div>
+            </div>
+            <div class="upgradeItem" id="upgrade8">
+                <span>Super Click</span>
+                <span id="upgrade8Cost"></span>
+                <button class="upgradeButton" id="buyUpgrade8">Comprar</button>
+                <div class="upgradeDesc">
+                    +1% de chance de um clique render 10x mais. <br>
+                    <strong>Valor atual:</strong> <span id="upgrade8Value"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
